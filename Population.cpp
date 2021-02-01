@@ -64,7 +64,7 @@ namespace sdds
 	}
 
 
-	bool load() {
+	bool load(const char filename[]) {
 		bool ok = false;
 
 		if (openFile(DATAFILE)) {
