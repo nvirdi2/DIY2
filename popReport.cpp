@@ -9,7 +9,7 @@
 #include "Population.h"
 using namespace sdds;
 int main() {
-   if (load("PCpopulationsComplete.csv")) {
+   if (load()) {
       display();
    }
    deallocateMemory();
