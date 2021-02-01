@@ -47,7 +47,7 @@ namespace sdds
 
 	bool load(PopulationPC &postalCodePop) {
 
-		bool ok = false;
+		/*bool ok = false;
 
 		char postalCode[20];
 	
@@ -60,7 +60,8 @@ namespace sdds
 
 				ok = true;
 			}
-		} return ok;
+		} return ok;*/
+		return read (postalCodePop.PostalCode) && read(postalCodePop.Pop);
 	}
 
 
