@@ -18,7 +18,8 @@ namespace sdds
 
     void sort();
 	bool load(PopulationPC& postalcodePOP);
-	bool load();
+	//bool load();
+	  bool load(const char filename[])
 	void display(const PopulationPC& postalcodePOP);
 	void display();
 
