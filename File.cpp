@@ -1,10 +1,9 @@
-
 /// Name: Navdeep Virdi
 // Seneca email: nvirdi2@myseneca.ca
 // Student ID: 166485193
 // Date: Jan 31, 2021
 
-//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+//I have done all the coding by myself
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <cstdio>
@@ -31,15 +30,15 @@ namespace sdds {
       if (fptr) fclose(fptr);
    }
 
-   bool read(int &population)
+   bool read(int &Population)
 	{
-		bool complete = fscanf(fptr, "%d\n", &population);
-		return complete;
+		bool done = fscanf(fptr, "%d\n", &Population);
+		return done;
 	}
 
-   bool read(char* Postal_Code)
+   bool read(char* postalCode)
 	{
-		bool complete = fscanf(fptr, "%3s,", Postal_Code);
-		return complete;
+		bool done = fscanf(fptr, "%3s,", postalCode);
+		return done;
 	}
 }
