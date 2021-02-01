@@ -1,11 +1,11 @@
-// Workshop 2: 
-// Version: 0.9
-// Date: 2021/01/23
+// Workshop 2 (DIY):
+// Version: 1.0
+// Date: 2021/1/25
 // Author: Fardad Soleimanloo
 // Description:
-// This file tests the DIY section of your workshop
-// Do not modify your code
-/////////////////////////////////////////////
+// popReport_prof.cpp
+//
+///////////////////////////////////////////////////
 #include "Population.h"
 using namespace sdds;
 int main() {
