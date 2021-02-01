@@ -31,7 +31,7 @@ namespace sdds
 
 		bool ok = false;
 
-		char postalCode[30] ={'\0'};
+		char postalCode[20];
 	
 		if (read(postalCode)) {
 
@@ -52,14 +52,13 @@ namespace sdds
 		if (openFile(DATAFILE)) {
 
 			postalCodeNo = noOfRecords();
-			postalcodePOP = new PopulationPC[postalCodeNo]{};
+			postalcodePOP = new PopulationPC[postalCodeNo];
 
 			for (int x = 0; x < postalCodeNo; x++) {
 
 				if (!load(postalcodePOP[x])) {
 
-					cout << "Error: incorrect number of records read; the data is possibly corrupted" 
-						<< endl;
+					cout << "Error: incorrect number of records read; the data is possibly corrupted" << endl;
 					closeFile();
 					return false;
 				}
@@ -112,7 +111,8 @@ namespace sdds
 	
 	
 	void display(const PopulationPC& postalcodePOP) {
-		cout << postalcodePOP.PostalCode << ": "
-			<< postalcodePOP.Population << endl;
+		cout << postalcodePOP.PostalCode << ": " << postalcodePOP.Population << endl;
 	}
+
+
 }
