@@ -47,7 +47,7 @@ namespace sdds
 
 	bool load(PopulationPC &postalCodePop) {
 
-		/*bool ok = false;
+		bool ok = false;
 
 		char postalCode[20];
 	
@@ -60,15 +60,14 @@ namespace sdds
 
 				ok = true;
 			}
-		} return ok;*/
-		return read (postalCodePop.PostalCode) && read(postalCodePop.Pop);
+		} return ok
 	}
 
 
-	bool load(const char filename[]) {
+	bool load(const char *file) {
 		bool ok = false;
 
-		if (openFile(DATAFILE)) {
+		if (openFile(file)) {
 
 			postalCodeNo = noOfRecords();
 			postalcodePOP = new PopulationPC[postalCodeNo];
@@ -87,7 +86,7 @@ namespace sdds
 
 		}
 		else {
-			cout << "Could not open data file: " << DATAFILE << endl;
+			cout << "Could not open data file: " << file << endl;
 		} return ok;
 	}
 
