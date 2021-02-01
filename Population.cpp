@@ -10,7 +10,7 @@
 #include "Population.h"
 #include "File.h"
 #include "cstring.h"
-
+#include <cstdio>
 using namespace std;
 
 namespace sdds 
