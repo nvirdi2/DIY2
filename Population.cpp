@@ -123,6 +123,7 @@ namespace sdds
 		}	
 
 		cout << "-------------------------" << endl;
+		cout << "Population of Canada: 35151726" <<endl; 
 	}
 	
 	
