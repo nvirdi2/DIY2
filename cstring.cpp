@@ -1,4 +1,4 @@
-/// Name: Navdeep Virdi
+// Name: Navdeep Virdi
 // Seneca email: nvirdi2@myseneca.ca
 // Student ID: 166485193
 // Date: Jan 31, 2021
