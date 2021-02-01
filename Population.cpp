@@ -58,7 +58,8 @@ namespace sdds
 
 				if (!load(postalcodePOP[x])) {
 
-					cout << "Error: incorrect number of records read; the data is possibly corrupted" << endl;
+					cout << "Error: incorrect number of records read; the data is possibly corrupted" 
+						<< endl;
 					closeFile();
 					return false;
 				}
@@ -111,8 +112,7 @@ namespace sdds
 	
 	
 	void display(const PopulationPC& postalcodePOP) {
-		cout << postalcodePOP.PostalCode << ": " << postalcodePOP.Population << endl;
+		cout << postalcodePOP.PostalCode << ": "
+			<< postalcodePOP.Population << endl;
 	}
-
-
 }
