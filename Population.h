@@ -25,6 +25,7 @@ namespace sdds
 
 
 	void deallocateMemory();
-
+void strCpy(char* des, const char* src);  
+	int strLen(const char* s);
 }
 #endif // SDDS_POPULATION_H_
