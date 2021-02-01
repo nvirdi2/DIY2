@@ -17,12 +17,11 @@ namespace sdds
         };
 
     void sort();
-
+	bool load(PopulationPC& postalcodePOP);
 	bool load();
-    bool load(PopulationPC& postalcodePOP);
-
+	void display(const PopulationPC& postalcodePOP);
 	void display();
-    void display(const PopulationPC& postalcodePOP);
+
 
 	void deallocateMemory();
 
