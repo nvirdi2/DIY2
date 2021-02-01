@@ -1,55 +1,53 @@
-
-//Navdeep Virdi
+/// Name: Navdeep Virdi
 // Seneca email: nvirdi2@myseneca.ca
 // Student ID: 166485193
 // Date: Jan 31, 2021
 
-//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+//I have done all the coding by myself 
 
 #include <iostream>
 
 #include "Population.h"
 #include "File.h"
 #include "cstring.h"
-#include <cstdio>
+
 using namespace std;
 
 namespace sdds 
 {
 
 	int postalCodeNo;
-	PopulationPC* postalcodePOP;
+	PopPC* postalcodePOP;
 
-
-    void strCpy(char* des, const char* src)
+	void strCpy(char* des, const char* src)
     {
         while ((*des++ = *src++));
     }
 
-   
-    int strLen(const char* s)
+	int strLen(const char* s)
     {
         int lenght = 0;
-        int x;
+        int i;
 
-        for (x = 0; s[x] != 0; x++)
+        for (i = 0; s[i] != 0; i++)
         {
             lenght++;
         } return (lenght);
     }
-	
+
+
 	void deallocateMemory() {
-		for (int x = 0; x < postalCodeNo; x++) {
+		for (int i = 0; i < postalCodeNo; i++) {
 			//RETURN NOTHING
 		}
 	}
 
 
-	bool load(PopulationPC &postalCodePop) {
+	bool load(PopPC &postalCodePop) {
 
 		bool ok = false;
 
-		char postalCode[20];
+		char postalCode[30] = {'\0'};
 	
 		if (read(postalCode)) {
 
@@ -60,21 +58,21 @@ namespace sdds
 
 				ok = true;
 			}
-		} return ok
+		} return ok;
 	}
 
 
-	bool load(const char *file) {
+	bool load(const char filename[]) {
 		bool ok = false;
 
-		if (openFile(file)) {
+		if (openFile(filename)) {
 
 			postalCodeNo = noOfRecords();
-			postalcodePOP = new PopulationPC[postalCodeNo];
+			postalcodePOP = new PopPC[postalCodeNo];
 
-			for (int x = 0; x < postalCodeNo; x++) {
+			for (int i = 0; i < postalCodeNo; i++) {
 
-				if (!load(postalcodePOP[x])) {
+				if (!load(postalcodePOP[i])) {
 
 					cout << "Error: incorrect number of records read; the data is possibly corrupted" << endl;
 					closeFile();
@@ -86,25 +84,25 @@ namespace sdds
 
 		}
 		else {
-			cout << "Could not open data file: " << file << endl;
+			cout << "Could not open data file: " << filename << endl;
 		} return ok;
 	}
 
 
 	void sort() {
-		PopulationPC temporary;
+		PopPC temp;
 
-		for (int x = postalCodeNo - 1; x > 0; x--) {
+		for (int i = postalCodeNo - 1; i > 0; i--) {
 
-			for (int y = 0; y < x; y++) {
+			for (int x = 0; x < i; x++) {
 
-				if (postalcodePOP[y].Population > postalcodePOP[y + 1].Population) {
+				if (postalcodePOP[x].Population > postalcodePOP[x + 1].Population) {
 
-					temporary = postalcodePOP[y];
+					temp = postalcodePOP[x];
 
-					postalcodePOP[y] = postalcodePOP[y + 1];
+					postalcodePOP[x] = postalcodePOP[x + 1];
 
-					postalcodePOP[y + 1] = temporary;
+					postalcodePOP[x + 1] = temp;
 				}
 			}
 		}
@@ -115,7 +113,7 @@ namespace sdds
 	cout << "EPostal Code: population" << endl;
 	cout << "-------------------------" << endl;
 
-		sort();
+	sort();
 
 	for (int number = 0; number < postalCodeNo; number++) {
 		
@@ -128,7 +126,7 @@ namespace sdds
 	}
 	
 	
-	void display(const PopulationPC& postalcodePOP) {
+	void display(const PopPC& postalcodePOP) {
 		cout << postalcodePOP.PostalCode << ": " << postalcodePOP.Population << endl;
 	}
 
