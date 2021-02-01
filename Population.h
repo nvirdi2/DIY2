@@ -19,10 +19,10 @@ namespace sdds
     void sort();
 
 	bool load(const char filename[]);
-    bool load(PopulationPC& postalcodePOP);
+    bool load(PopPC& postalcodePOP);
 
 	void display();
-    void display(const PopulationPC& postalcodePOP);
+    void display(const PopPC& postalcodePOP);
 
 	void deallocateMemory();
 
