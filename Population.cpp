@@ -31,7 +31,7 @@ namespace sdds
 
 		bool ok = false;
 
-		char postalCode[25] ={'\0'};
+		char postalCode[30] ={'\0'};
 	
 		if (read(postalCode)) {
 
