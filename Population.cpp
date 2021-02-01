@@ -3,7 +3,7 @@
 // Student ID: 166485193
 // Date: Jan 31, 2021
 
-//I have done all the coding by myself 
+//I have done all the coding by myself with the help of the LAB 
 
 #include <iostream>
 
@@ -18,6 +18,7 @@ namespace sdds
 
 	int postalCodeNo;
 	PopPC* postalcodePOP;
+	int popTotal;
 
 	void strCpy(char* des, const char* src)
     {
@@ -55,7 +56,7 @@ namespace sdds
 
 				postalCodePop.PostalCode = new char[strLen(postalCode) + 1];
 				strCpy(postalCodePop.PostalCode, postalCode);
-
+				popTotal += postalCodePop.Population;
 				ok = true;
 			}
 		} return ok;
@@ -123,7 +124,7 @@ namespace sdds
 		}	
 
 		cout << "-------------------------" << endl;
-		cout << "Population of Canada: 35151726" <<endl; 
+		cout << "Population of Canada: " << popTotal <<endl; 
 	}
 	
 	
