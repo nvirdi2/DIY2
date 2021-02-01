@@ -1,0 +1,27 @@
+Navdeep Virdi
+166485193
+January 31, 2021
+
+Reflection
+  Throughout this workshop, I have learned the use of reading functions and overloading functions
+although, I do still need to practice them more because I will admit I am not the best at it. A
+function that was being used is an overload function and the parameters it passes are out parameters.
+However, what is an out parameter? Well doing research I received an answer to that. According to "Modernes C++",  
+When looking at an in parameter and out there is a difference. An out parameter can be used to 
+return a lot of values. They can return one or more value and unlike in parameter, they don't require
+to be a const. For example, when looking at DIY and in the module "Population.h" you will see there are
+many out parameters, such as, "bool load();". There is no "const" in the brackets and this means 
+it is an out. When looking for an in parameter we look for constants. In this case in the module "Population.h"
+there is a in parameter which is "void display(const PopulationPC& postalcodePOP);". As you see in those 
+brackets there is a constant reference. 
+  Yet, this workshop has taught me a lot. This first part of the lab was extremely hard to put together
+at one point but using past lectures, and the teacher's notes I finally overcame it. With lab done the
+DIY was not too hard because it was very similar but a good learning experience. I got to use the functions
+again and but the modules together even though it was very tough in the start. The extension that was given
+ was very helpful since I got an extra day to learn how to put the rest of it together. I understand the use
+of in and out parameter and how the read function was called on due to this workshop. The best part was
+to see it all come together at the end. I have learned my lesson from workshop 1 lab and understood that I
+will again have to pseudocode or make a flowchart on how the information is going to be passed and stored. 
+
+Works cited
+Modernes C++. ModernesCpp.com. https://www.modernescpp.com/index.php/c-core-guidelines-how-to-pass-function-parameters. 
