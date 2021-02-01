@@ -3,7 +3,7 @@
 // Student ID: 166485193
 // Date: Jan 31, 2021
 
-//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+//I have done all the coding by myself 
 
 #ifndef SDDS_FILE_H_
 #define SDDS_FILE_H_
@@ -12,7 +12,7 @@ namespace sdds {
    void closeFile();
    int noOfRecords();
 
-   bool read(char* Postal_Code);
-   bool read(int &population); 
+   bool read(char* postalCode);
+   bool read(int &Population); 
 }
 #endif // !SDDS_FILE_H_
