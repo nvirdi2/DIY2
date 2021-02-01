@@ -110,7 +110,7 @@ namespace sdds
 
 	
 	void display() {
-	cout << "EPostal Code: population" << endl;
+	cout << "Postal Code: population" << endl;
 	cout << "-------------------------" << endl;
 
 	sort();
