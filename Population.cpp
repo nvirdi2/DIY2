@@ -127,7 +127,7 @@ namespace sdds
 	
 	
 	void display(const PopPC& postalcodePOP) {
-		cout << postalcodePOP.PostalCode << ": " << postalcodePOP.Population << endl;
+		cout << postalcodePOP.PostalCode << ":  " << postalcodePOP.Population << endl;
 	}
 
 
